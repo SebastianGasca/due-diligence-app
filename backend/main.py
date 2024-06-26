@@ -1,8 +1,15 @@
 # backend/main.py
 
 from fastapi import FastAPI
-from backend.core.init_model import load_model
-from backend.routers import news
+
+# LOCAL
+# from backend.core.init_model import load_model
+# from backend.routers import news
+
+# RENDER
+from core.init_model import load_model
+from routers import news
+
 import uvicorn
 
 app = FastAPI()

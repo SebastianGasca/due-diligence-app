@@ -4,7 +4,13 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from typing import List
 from pydantic import BaseModel
 from datetime import date, datetime, timedelta
-from backend.services.utils import web_scrapping_st, palabras_en_noticias, resumir_noticias_bert2bert_st
+
+# LOCAL
+# from backend.services.utils import web_scrapping_st, palabras_en_noticias, resumir_noticias_bert2bert_st
+
+# RENDER
+from services.utils import web_scrapping_st, palabras_en_noticias, resumir_noticias_bert2bert_st
+
 import pandas as pd
 
 router = APIRouter()

@@ -38,12 +38,14 @@ if empresa:
 st.divider()
 
 #-- DEVOP --#
+URL = "http://127.0.0.1:8000"
+
 if submit_btn:
     palabras_claves = palabras_claves.split()
     st.write("Procesando Web Scrapping de Noticias ...")
     
     # Hacer la solicitud a la API para scrapear noticias
-    url = "http://127.0.0.1:8000/news/scrape"
+    url = f"{URL}/news/scrape"
     payload = {
         "company": empresa,
         "start_date": str(fecha_inicio),
@@ -67,7 +69,7 @@ if st.button("Run Model"):
         noticias = st.session_state['noticias']
         
         # Hacer la solicitud a la API para resumir noticias
-        url = "http://127.0.0.1:8000/news/summarize"
+        url = f"{URL}/news/summarize"
         payload = noticias.to_dict(orient="records")
 
         response = requests.post(url, json=payload)
