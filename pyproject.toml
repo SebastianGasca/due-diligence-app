@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "due-diligence"
+version = "0.1.0"
+description = ""
+authors = ["Sebastián Gasca"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.36.0"
+pandas = "^2.2.2"
+numpy = "^2.0.0"
+feedparser = "^6.0.11"
+lxml = "^5.2.2"
+lxml-html-clean = "^0.1.1"
+matplotlib = "^3.9.0"
+newspaper3k = "^0.2.8"
+regex = "^2024.5.15"
+requests = "^2.32.3"
+seaborn = "^0.13.2"
+tqdm = "^4.66.4"
+urllib3 = "^2.2.2"
+torch = "^2.3.1"
+transformers = "^4.41.2"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+pydantic = "^2.7.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
